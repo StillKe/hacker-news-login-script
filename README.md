@@ -43,6 +43,64 @@ The `login.py` script performs the following steps:
 - requests library
 - BeautifulSoup library
 
+# Hacker News Scraper
+
+This Python script scrapes the top stories from Hacker News and extracts relevant information such as the story title, URL, rank, and ID.
+
+## How It Works
+
+The script performs the following steps:
+
+1. Sends an HTTP GET request to Hacker News using the `requests` library.
+2. Parses the HTML content of the response using the `BeautifulSoup` library.
+3. Searches for all `<tr>` elements with the class `athing`, which represent individual stories on the page.
+4. Extracts the ID, title, URL, and rank of each story.
+5. Formats the extracted data into a list of dictionaries.
+6. Prints the formatted data to the console.
+
+## Usage
+
+1. Ensure you have Python installed on your system.
+2. Install the required libraries by running:
+
+    ```
+    pip install requests beautifulsoup4
+    ```
+
+3. Run the script using the following command:
+
+    ```
+    python3 hacker_news_scraper.py
+    ```
+
+4. The script will output the top stories from Hacker News along with their details.
+
+## Sample Output
+
+Here is a sample output of the script:
+
+Rank: 1
+Title: Inside the Super Nintendo cartridges
+URL: https://fabiensanglard.net/snes_carts/index.html
+ID: 40111274
+
+Rank: 2
+Title: Show HN: OpenOrb, a curated search engine for Atom and RSS feeds
+URL: https://openorb.idiot.sh/search
+ID: 40112958
+
+...
+
+markdown
+Copy code
+
+## Dependencies
+
+- Python 3.x
+- `requests`
+- `beautifulsoup4`
+
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
